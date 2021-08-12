@@ -1,0 +1,15 @@
+void preencherRAM (int **matrizRAM);
+void maquinaInterpretada (int **matrizRAM);
+int somarInteiros (int contentOne, int contentTwo);
+int subtrairInteiros (int contentOne, int contentTwo);
+int multiplicarInteiros (int contentOne, int contentTwo);
+int dividirInteiros (int contentOne, int contentTwo);
+int calcularPitagoras (int contentOne, int contentTwo);
+void ordenamentoExecucao (int **matrizRAM);
+void printMatriz (int **matrizRAM);
+void printMenu (void);
+int lerComando ();
+void alterarRAM (int **matrizRAM);
+int **alocaMatriz(int **matrizRAM);
+int **desalocaMatriz(int **matrizRAM);
+void alterarOpcode (int **matrizRAM);
