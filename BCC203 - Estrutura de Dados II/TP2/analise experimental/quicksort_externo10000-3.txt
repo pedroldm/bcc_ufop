@@ -1,0 +1,15 @@
+
+Arquivo: txt/PROVAO_DESORDENADO.TXT
+Convertendo o arquivo .txt para binário. Aguarde...
+Ordenando o arquivo binário. Aguarde...
+
+- ESTATÍSTICAS DA EXECUÇÃO -     
+
+Nº de comparações: 386114 (E : 102799 & I : 283315)
+Nº de leituras(fread): 70001
+Nº de escritas(fwrite): 70001
+Tempo de execução: 0.296875 segundos
+
+Convertendo o arquivo binário para .txt. Aguarde...
+Resultado da ordenação impresso em: RESULTADO.TXT
+

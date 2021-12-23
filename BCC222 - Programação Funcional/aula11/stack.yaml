@@ -1,0 +1,26 @@
+# Override default flag values for local packages and extra-deps
+flags:
+
+extra-package-dbs: []
+
+packages: 
+- .
+
+extra-deps:
+
+
+# Media
+
+
+# Code
+
+
+# PKI
+
+
+# Imgs
+
+explicit-setup-deps:
+  ! '*': true
+
+resolver: lts-5.9

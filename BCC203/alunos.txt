@@ -1,6 +1,0 @@
-4512 Pedro 5 6 7 19
-1214 Fernando 4 4 7 5
-6857 Paulo 9 9 7 2
-3211 Maria 1 1 1 4
-7877 Rafael 4 1 2 6
-2121 Joana 10 10 9 1
