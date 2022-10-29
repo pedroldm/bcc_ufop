@@ -1,0 +1,229 @@
+\hypertarget{classModelAbstract}{}\doxysection{Model\+Abstract Class Reference}
+\label{classModelAbstract}\index{ModelAbstract@{ModelAbstract}}
+
+
+{\ttfamily \#include $<$model\+Abstract.\+h$>$}
+
+
+
+Inheritance diagram for Model\+Abstract\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classModelAbstract__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Abstract\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classModelAbstract__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classModelAbstract_a8e55e08ad0c127e6134ef74c4d2f05c5}{$\sim$\+Model\+Abstract}} ()
+\item 
+virtual \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classModelAbstract_af85c67a96bff1b30abb37093d891b71a}{create\+System}} (string name, double value)=0
+\item 
+virtual \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ \mbox{\hyperlink{classModelAbstract_a8ac56f8cf3835034e6130d6b05685011}{create\+Flux}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$source, \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$target, bool flux\+Direction, double last\+Value, string name, double($\ast$func)(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a))=0
+\item 
+virtual void \mbox{\hyperlink{classModelAbstract_a935ecee43c73b08f6f01b2ddee984dc3}{execute}} (double start, double end, double increase)=0
+\item 
+virtual void \mbox{\hyperlink{classModelAbstract_aacc809cf767f91e7b01cac06217ef4f0}{set\+Time}} (double time)=0
+\item 
+virtual double \mbox{\hyperlink{classModelAbstract_ab15eafe166625de93082687b40f55d51}{get\+Time}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a16c3470f56de5a39df00dda4404b43ba}{get\+Fluxes\+Begin}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a65159aa9f88b958e569a543e7bee04f4}{get\+Fluxes\+End}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a1a8de5cee9822852387516872967c65d}{get\+Systems\+Begin}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a3d99ae21de616cd73d5d57e364fb93ef}{get\+Systems\+End}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a2d05908d83601c11b6a4fc5758a36c96}{get\+Models\+Begin}} ()=0
+\item 
+virtual vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelAbstract_a205e0dec696968b8af90e8f1d18d71d4}{get\+Models\+End}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ \mbox{\hyperlink{classModelAbstract_aa88a9409f52e7010b84cd6ed1e83b59f}{create\+Model}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classModelAbstract_a661726bcd9f9bc67afa01c7a261bf878}{remove}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$sys)=0
+\item 
+virtual void \mbox{\hyperlink{classModelAbstract_aee25a63621eed40cac593d494af4ac9a}{remove}} (\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$flux)=0
+\item 
+virtual void \mbox{\hyperlink{classModelAbstract_af041d2bebcaa0cd74701a2d3a9367318}{remove}} (\mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$model)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModelAbstract_a8e55e08ad0c127e6134ef74c4d2f05c5}\label{classModelAbstract_a8e55e08ad0c127e6134ef74c4d2f05c5}} 
+\index{ModelAbstract@{ModelAbstract}!````~ModelAbstract@{$\sim$ModelAbstract}}
+\index{````~ModelAbstract@{$\sim$ModelAbstract}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{$\sim$ModelAbstract()}{~ModelAbstract()}}
+{\footnotesize\ttfamily virtual Model\+Abstract\+::$\sim$\+Model\+Abstract (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModelAbstract_a8ac56f8cf3835034e6130d6b05685011}\label{classModelAbstract_a8ac56f8cf3835034e6130d6b05685011}} 
+\index{ModelAbstract@{ModelAbstract}!createFlux@{createFlux}}
+\index{createFlux@{createFlux}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{createFlux()}{createFlux()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ Model\+Abstract\+::create\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{target,  }\item[{bool}]{flux\+Direction,  }\item[{double}]{last\+Value,  }\item[{string}]{name,  }\item[{double($\ast$)(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a)}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a76ccdd16b60fce05077635b511c94180}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_aa88a9409f52e7010b84cd6ed1e83b59f}\label{classModelAbstract_aa88a9409f52e7010b84cd6ed1e83b59f}} 
+\index{ModelAbstract@{ModelAbstract}!createModel@{createModel}}
+\index{createModel@{createModel}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ Model\+Abstract\+::create\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classModelAbstract_af85c67a96bff1b30abb37093d891b71a}\label{classModelAbstract_af85c67a96bff1b30abb37093d891b71a}} 
+\index{ModelAbstract@{ModelAbstract}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ Model\+Abstract\+::create\+System (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a2115f360441fb8c81d54f2747c8f7e73}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a935ecee43c73b08f6f01b2ddee984dc3}\label{classModelAbstract_a935ecee43c73b08f6f01b2ddee984dc3}} 
+\index{ModelAbstract@{ModelAbstract}!execute@{execute}}
+\index{execute@{execute}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void Model\+Abstract\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{end,  }\item[{double}]{increase }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_ac8eff985c53a5b401b3b68aa334a9187}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a16c3470f56de5a39df00dda4404b43ba}\label{classModelAbstract_a16c3470f56de5a39df00dda4404b43ba}} 
+\index{ModelAbstract@{ModelAbstract}!getFluxesBegin@{getFluxesBegin}}
+\index{getFluxesBegin@{getFluxesBegin}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getFluxesBegin()}{getFluxesBegin()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Fluxes\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a244f78c2e688177cb20b259a0e8b97e8}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a65159aa9f88b958e569a543e7bee04f4}\label{classModelAbstract_a65159aa9f88b958e569a543e7bee04f4}} 
+\index{ModelAbstract@{ModelAbstract}!getFluxesEnd@{getFluxesEnd}}
+\index{getFluxesEnd@{getFluxesEnd}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getFluxesEnd()}{getFluxesEnd()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Fluxes\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a09a20beed5d61b9ec8d0a3c1f0c55575}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a2d05908d83601c11b6a4fc5758a36c96}\label{classModelAbstract_a2d05908d83601c11b6a4fc5758a36c96}} 
+\index{ModelAbstract@{ModelAbstract}!getModelsBegin@{getModelsBegin}}
+\index{getModelsBegin@{getModelsBegin}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getModelsBegin()}{getModelsBegin()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Models\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a7fb50feebd9a79236cd9b0f38aa59bc2}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a205e0dec696968b8af90e8f1d18d71d4}\label{classModelAbstract_a205e0dec696968b8af90e8f1d18d71d4}} 
+\index{ModelAbstract@{ModelAbstract}!getModelsEnd@{getModelsEnd}}
+\index{getModelsEnd@{getModelsEnd}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getModelsEnd()}{getModelsEnd()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Models\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a6f24c233b0ff36a48f1786e201aa21a6}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a1a8de5cee9822852387516872967c65d}\label{classModelAbstract_a1a8de5cee9822852387516872967c65d}} 
+\index{ModelAbstract@{ModelAbstract}!getSystemsBegin@{getSystemsBegin}}
+\index{getSystemsBegin@{getSystemsBegin}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getSystemsBegin()}{getSystemsBegin()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Systems\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a6743bbeccbc7d8c2486371066fafa25b}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a3d99ae21de616cd73d5d57e364fb93ef}\label{classModelAbstract_a3d99ae21de616cd73d5d57e364fb93ef}} 
+\index{ModelAbstract@{ModelAbstract}!getSystemsEnd@{getSystemsEnd}}
+\index{getSystemsEnd@{getSystemsEnd}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getSystemsEnd()}{getSystemsEnd()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator Model\+Abstract\+::get\+Systems\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_aec6e9c47ad4f0f38529f7591ef923cea}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_ab15eafe166625de93082687b40f55d51}\label{classModelAbstract_ab15eafe166625de93082687b40f55d51}} 
+\index{ModelAbstract@{ModelAbstract}!getTime@{getTime}}
+\index{getTime@{getTime}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily virtual double Model\+Abstract\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_ab85d2707cbebf546cf79435e61e3332a}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_aee25a63621eed40cac593d494af4ac9a}\label{classModelAbstract_aee25a63621eed40cac593d494af4ac9a}} 
+\index{ModelAbstract@{ModelAbstract}!remove@{remove}}
+\index{remove@{remove}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Model\+Abstract\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$}]{flux }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a8b8191f3f8f4ba492dfec6e980169ac8}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_af041d2bebcaa0cd74701a2d3a9367318}\label{classModelAbstract_af041d2bebcaa0cd74701a2d3a9367318}} 
+\index{ModelAbstract@{ModelAbstract}!remove@{remove}}
+\index{remove@{remove}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Model\+Abstract\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_af8fcb79450ff740e9dad28e17d0ed7d5}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_a661726bcd9f9bc67afa01c7a261bf878}\label{classModelAbstract_a661726bcd9f9bc67afa01c7a261bf878}} 
+\index{ModelAbstract@{ModelAbstract}!remove@{remove}}
+\index{remove@{remove}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void Model\+Abstract\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_ad126e5e244c35eea8c54ca8b8238e00c}{Model\+Handle}}.
+
+\mbox{\Hypertarget{classModelAbstract_aacc809cf767f91e7b01cac06217ef4f0}\label{classModelAbstract_aacc809cf767f91e7b01cac06217ef4f0}} 
+\index{ModelAbstract@{ModelAbstract}!setTime@{setTime}}
+\index{setTime@{setTime}!ModelAbstract@{ModelAbstract}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily virtual void Model\+Abstract\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_ae06fe1b63e590afdbaaf0a077b4b3930}{Model\+Handle}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib/\mbox{\hyperlink{modelAbstract_8h}{model\+Abstract.\+h}}\item 
+src/lib/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}

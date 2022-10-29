@@ -1,0 +1,5 @@
+<map id="FluxBody" name="FluxBody">
+<area shape="rect" id="node1" title="Class that contains 2 systems (source and target) and calculates the flux of values between them...." alt="" coords="57,219,211,531"/>
+<area shape="rect" id="node2" href="$classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="5,5,108,141"/>
+<area shape="rect" id="node3" href="$classSystemAbstract.html" title=" " alt="" coords="132,5,293,141"/>
+</map>

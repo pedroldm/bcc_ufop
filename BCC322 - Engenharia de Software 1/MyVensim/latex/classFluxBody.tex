@@ -1,0 +1,337 @@
+\hypertarget{classFluxBody}{}\doxysection{Flux\+Body Class Reference}
+\label{classFluxBody}\index{FluxBody@{FluxBody}}
+
+
+Class that contains 2 systems (source and target) and calculates the flux of values between them. Inherit from the pure abstract class Flux\+Base.  
+
+
+
+
+{\ttfamily \#include $<$flux.\+h$>$}
+
+
+
+Inheritance diagram for Flux\+Body\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classFluxBody__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flux\+Body\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classFluxBody__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}{set\+Source}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$\mbox{\hyperlink{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}{source}})
+\begin{DoxyCompactList}\small\item\em Set the Source object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}{set\+Target}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$\mbox{\hyperlink{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}{target}})
+\begin{DoxyCompactList}\small\item\em Set the Target object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}{set\+Func}} (double($\ast$\mbox{\hyperlink{classFluxBody_a887fe161036f0e2f3e51888163711bb9}{func}})(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a))
+\begin{DoxyCompactList}\small\item\em Set the Func object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}{set\+Flux\+Direction}} (bool \mbox{\hyperlink{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}{flux\+Direction}})
+\begin{DoxyCompactList}\small\item\em Set the Flux Direction object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_a9ffe110f250b2d602f92776508853a78}{set\+Last\+Value}} (double \mbox{\hyperlink{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}{last\+Value}})
+\begin{DoxyCompactList}\small\item\em Set the Last Value object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}{set\+Name}} (string \mbox{\hyperlink{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}{name}})
+\begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classFluxBody_a432c99b6fd7d8a0661a2640e55f0b063}{get\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Get the Source object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classFluxBody_a88042de4f84bfcc93f49ba5ee58946c0}{get\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Get the Target object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFluxBody_ac53bb18454cfe04acf5456c0b84c37e4}{get\+Flux\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Get the Flux Direction object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFluxBody_a31560d260435a6568a808e23cb3a1f1a}{get\+Last\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the Last Value object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFluxBody_a35c0fc5652ad48963f2d45fd68070c40}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_ab1bee3183735b7ed59ae6f91bfce69cb}{remove\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Remove the source system, setting it\textquotesingle{}s pointer to NULL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_ae3f194b0736e6be97f3d765a7ff66c5c}{remove\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Remove the target system, setting it\textquotesingle{}s pointer to NULL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFluxBody_aa570d1caaaf2e9bc98f63ef63a35ece5}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes double ({\itshape func)(System} a) and set this-\/\texorpdfstring{$>$}{>}last\+Value with the function\textquotesingle{}s return. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}{source}}
+\begin{DoxyCompactList}\small\item\em Source System. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}{target}}
+\begin{DoxyCompactList}\small\item\em Target System. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}{flux\+Direction}}
+\begin{DoxyCompactList}\small\item\em Boolean variable that indicates the flux direction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}{last\+Value}}
+\begin{DoxyCompactList}\small\item\em Calculated from source\textquotesingle{}s or target\textquotesingle{}s value, depending on the flux direction. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}{name}}
+\begin{DoxyCompactList}\small\item\em Flux\textquotesingle{}s name for identification. \end{DoxyCompactList}\item 
+double($\ast$ \mbox{\hyperlink{classFluxBody_a887fe161036f0e2f3e51888163711bb9}{func}} )(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Function provided by the client, used to calculate the transit of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains 2 systems (source and target) and calculates the flux of values between them. Inherit from the pure abstract class Flux\+Base. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFluxBody_aa570d1caaaf2e9bc98f63ef63a35ece5}\label{classFluxBody_aa570d1caaaf2e9bc98f63ef63a35ece5}} 
+\index{FluxBody@{FluxBody}!execute@{execute}}
+\index{execute@{execute}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Flux\+Body\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executes double ({\itshape func)(System} a) and set this-\/\texorpdfstring{$>$}{>}last\+Value with the function\textquotesingle{}s return. 
+
+\mbox{\Hypertarget{classFluxBody_ac53bb18454cfe04acf5456c0b84c37e4}\label{classFluxBody_ac53bb18454cfe04acf5456c0b84c37e4}} 
+\index{FluxBody@{FluxBody}!getFluxDirection@{getFluxDirection}}
+\index{getFluxDirection@{getFluxDirection}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{getFluxDirection()}{getFluxDirection()}}
+{\footnotesize\ttfamily bool Flux\+Body\+::get\+Flux\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Flux Direction object. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFluxBody_a31560d260435a6568a808e23cb3a1f1a}\label{classFluxBody_a31560d260435a6568a808e23cb3a1f1a}} 
+\index{FluxBody@{FluxBody}!getLastValue@{getLastValue}}
+\index{getLastValue@{getLastValue}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{getLastValue()}{getLastValue()}}
+{\footnotesize\ttfamily double Flux\+Body\+::get\+Last\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Last Value object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFluxBody_a35c0fc5652ad48963f2d45fd68070c40}\label{classFluxBody_a35c0fc5652ad48963f2d45fd68070c40}} 
+\index{FluxBody@{FluxBody}!getName@{getName}}
+\index{getName@{getName}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Flux\+Body\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Name object. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFluxBody_a432c99b6fd7d8a0661a2640e55f0b063}\label{classFluxBody_a432c99b6fd7d8a0661a2640e55f0b063}} 
+\index{FluxBody@{FluxBody}!getSource@{getSource}}
+\index{getSource@{getSource}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ Flux\+Body\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Source object. 
+
+\begin{DoxyReturn}{Returns}
+System$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFluxBody_a88042de4f84bfcc93f49ba5ee58946c0}\label{classFluxBody_a88042de4f84bfcc93f49ba5ee58946c0}} 
+\index{FluxBody@{FluxBody}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ Flux\+Body\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Target object. 
+
+\begin{DoxyReturn}{Returns}
+System$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFluxBody_ab1bee3183735b7ed59ae6f91bfce69cb}\label{classFluxBody_ab1bee3183735b7ed59ae6f91bfce69cb}} 
+\index{FluxBody@{FluxBody}!removeSource@{removeSource}}
+\index{removeSource@{removeSource}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{removeSource()}{removeSource()}}
+{\footnotesize\ttfamily void Flux\+Body\+::remove\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove the source system, setting it\textquotesingle{}s pointer to NULL. 
+
+\mbox{\Hypertarget{classFluxBody_ae3f194b0736e6be97f3d765a7ff66c5c}\label{classFluxBody_ae3f194b0736e6be97f3d765a7ff66c5c}} 
+\index{FluxBody@{FluxBody}!removeTarget@{removeTarget}}
+\index{removeTarget@{removeTarget}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{removeTarget()}{removeTarget()}}
+{\footnotesize\ttfamily void Flux\+Body\+::remove\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove the target system, setting it\textquotesingle{}s pointer to NULL. 
+
+\mbox{\Hypertarget{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}\label{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}} 
+\index{FluxBody@{FluxBody}!setFluxDirection@{setFluxDirection}}
+\index{setFluxDirection@{setFluxDirection}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setFluxDirection()}{setFluxDirection()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Flux\+Direction (\begin{DoxyParamCaption}\item[{bool}]{flux\+Direction }\end{DoxyParamCaption})}
+
+
+
+Set the Flux Direction object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flux\+Direction} & Indicates if the value to be used belongs to source or target flux \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}\label{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}} 
+\index{FluxBody@{FluxBody}!setFunc@{setFunc}}
+\index{setFunc@{setFunc}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setFunc()}{setFunc()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Func (\begin{DoxyParamCaption}\item[{double($\ast$)(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a)}]{func }\end{DoxyParamCaption})}
+
+
+
+Set the Func object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function pointer that is used to calculate the transit of values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFluxBody_a9ffe110f250b2d602f92776508853a78}\label{classFluxBody_a9ffe110f250b2d602f92776508853a78}} 
+\index{FluxBody@{FluxBody}!setLastValue@{setLastValue}}
+\index{setLastValue@{setLastValue}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setLastValue()}{setLastValue()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Last\+Value (\begin{DoxyParamCaption}\item[{double}]{last\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the Last Value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+Value} & Value calculated from the last function execution \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}\label{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}} 
+\index{FluxBody@{FluxBody}!setName@{setName}}
+\index{setName@{setName}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Set the Name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Flux\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}\label{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}} 
+\index{FluxBody@{FluxBody}!setSource@{setSource}}
+\index{setSource@{setSource}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Set the Source object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source system of the flux \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}\label{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}} 
+\index{FluxBody@{FluxBody}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily void Flux\+Body\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Set the Target object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target system of the flux \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}\label{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}} 
+\index{FluxBody@{FluxBody}!fluxDirection@{fluxDirection}}
+\index{fluxDirection@{fluxDirection}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{fluxDirection}{fluxDirection}}
+{\footnotesize\ttfamily bool Flux\+Body\+::flux\+Direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Boolean variable that indicates the flux direction. 
+
+\mbox{\Hypertarget{classFluxBody_a887fe161036f0e2f3e51888163711bb9}\label{classFluxBody_a887fe161036f0e2f3e51888163711bb9}} 
+\index{FluxBody@{FluxBody}!func@{func}}
+\index{func@{func}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily double($\ast$ Flux\+Body\+::func) (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Function provided by the client, used to calculate the transit of values. 
+
+\mbox{\Hypertarget{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}\label{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}} 
+\index{FluxBody@{FluxBody}!lastValue@{lastValue}}
+\index{lastValue@{lastValue}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{lastValue}{lastValue}}
+{\footnotesize\ttfamily double Flux\+Body\+::last\+Value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calculated from source\textquotesingle{}s or target\textquotesingle{}s value, depending on the flux direction. 
+
+\mbox{\Hypertarget{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}\label{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}} 
+\index{FluxBody@{FluxBody}!name@{name}}
+\index{name@{name}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Flux\+Body\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flux\textquotesingle{}s name for identification. 
+
+\mbox{\Hypertarget{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}\label{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}} 
+\index{FluxBody@{FluxBody}!source@{source}}
+\index{source@{source}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}}$\ast$ Flux\+Body\+::source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Source System. 
+
+\mbox{\Hypertarget{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}\label{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}} 
+\index{FluxBody@{FluxBody}!target@{target}}
+\index{target@{target}!FluxBody@{FluxBody}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}}$\ast$ Flux\+Body\+::target\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Target System. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib/\mbox{\hyperlink{flux_8h}{flux.\+h}}\item 
+src/lib/\mbox{\hyperlink{flux_8cpp}{flux.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="FluxHandle" name="FluxHandle">
+<area shape="rect" id="node1" title=" " alt="" coords="21,925,176,1149"/>
+<area shape="rect" id="node2" href="$classFluxAbstract.html" title=" " alt="" coords="5,593,160,876"/>
+<area shape="rect" id="node3" href="$classHandle.html" title=" " alt="" coords="185,674,343,795"/>
+<area shape="rect" id="node4" href="$classFluxBody.html" title="Class that contains 2 systems (source and target) and calculates the flux of values between them...." alt="" coords="187,219,341,531"/>
+<area shape="rect" id="node5" href="$classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="135,5,238,141"/>
+<area shape="rect" id="node6" href="$classSystemAbstract.html" title=" " alt="" coords="262,5,423,141"/>
+</map>

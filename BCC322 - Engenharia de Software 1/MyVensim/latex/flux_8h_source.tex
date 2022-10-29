@@ -1,0 +1,122 @@
+\hypertarget{flux_8h_source}{}\doxysection{flux.\+h}
+\label{flux_8h_source}\index{src/lib/flux.h@{src/lib/flux.h}}
+\mbox{\hyperlink{flux_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FLUX\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FLUX\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{fluxAbstract_8h}{fluxAbstract.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{handleBody_8h}{handleBody.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classFluxBody}{FluxBody}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBody}{Body}} \{}
+\DoxyCodeLine{12     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17         \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}{source}};}
+\DoxyCodeLine{22         \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}{target}};}
+\DoxyCodeLine{27         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}{fluxDirection}};}
+\DoxyCodeLine{32         \textcolor{keywordtype}{double} \mbox{\hyperlink{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}{lastValue}};}
+\DoxyCodeLine{37         \textcolor{keywordtype}{string} \mbox{\hyperlink{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}{name}};}
+\DoxyCodeLine{42         double (*\mbox{\hyperlink{classFluxBody_a887fe161036f0e2f3e51888163711bb9}{func}})(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* a);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{public}:}
+\DoxyCodeLine{45 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{46 \textcolor{comment}{//         * @brief Construct a new Flux object}}
+\DoxyCodeLine{47 \textcolor{comment}{//         * }}
+\DoxyCodeLine{48 \textcolor{comment}{//         */}}
+\DoxyCodeLine{49 \textcolor{comment}{//        Flux();}}
+\DoxyCodeLine{50 \textcolor{comment}{//        }}
+\DoxyCodeLine{51 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{52 \textcolor{comment}{//         * @brief Construct a new Flux object}}
+\DoxyCodeLine{53 \textcolor{comment}{//         * }}
+\DoxyCodeLine{54 \textcolor{comment}{//         * @param source Source system of the flux}}
+\DoxyCodeLine{55 \textcolor{comment}{//         * @param target Target system of the flux}}
+\DoxyCodeLine{56 \textcolor{comment}{//         * @param fluxDirection Indicates if the value to be used belongs to source or target flux}}
+\DoxyCodeLine{57 \textcolor{comment}{//         * @param lastValue Value calculated from the last function execution}}
+\DoxyCodeLine{58 \textcolor{comment}{//         * @param name Flux's name}}
+\DoxyCodeLine{59 \textcolor{comment}{//         * @param func Function pointer that is used to calculate the transit of values}}
+\DoxyCodeLine{60 \textcolor{comment}{//         */}}
+\DoxyCodeLine{61 \textcolor{comment}{//        Flux(SystemAbstract* source, SystemAbstract* target, bool fluxDirection, double lastValue, string name, double (*func) (SystemAbstract* a));}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{64 \textcolor{comment}{//         * @brief Construct a new Flux object}}
+\DoxyCodeLine{65 \textcolor{comment}{//         * }}
+\DoxyCodeLine{66 \textcolor{comment}{//         * @param rhs Const Flux object used to construct a Flux copy}}
+\DoxyCodeLine{67 \textcolor{comment}{//         */}}
+\DoxyCodeLine{68 \textcolor{comment}{//        Flux(const Flux\& rhs); }}
+\DoxyCodeLine{69 \textcolor{comment}{//}}
+\DoxyCodeLine{70 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{71 \textcolor{comment}{//         * @brief Destroy the Flux object}}
+\DoxyCodeLine{72 \textcolor{comment}{//         * }}
+\DoxyCodeLine{73 \textcolor{comment}{//         */}}
+\DoxyCodeLine{74 \textcolor{comment}{//        virtual \string~Flux();}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}{setSource}}(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_ac718fcf3b870277437d2d5faec18ecb8}{source}});}
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}{setTarget}}(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_a603d2eca0d5198fdd6432180d6449c18}{target}});}
+\DoxyCodeLine{93         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}{setFunc}}(\textcolor{keywordtype}{double} (*\mbox{\hyperlink{classFluxBody_a887fe161036f0e2f3e51888163711bb9}{func}}) (\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* a));}
+\DoxyCodeLine{99         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}{setFluxDirection}}(\textcolor{keywordtype}{bool} \mbox{\hyperlink{classFluxBody_a342fb4ce29fe7e98001daa70e57946f9}{fluxDirection}});}
+\DoxyCodeLine{105         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_a9ffe110f250b2d602f92776508853a78}{setLastValue}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classFluxBody_adcc27edd26f84306d47cec4ac08c3834}{lastValue}});}
+\DoxyCodeLine{111         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}{setName}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{classFluxBody_a305cbb6a29c61f0a674d424f68b7ccbf}{name}});}
+\DoxyCodeLine{117         \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_a432c99b6fd7d8a0661a2640e55f0b063}{getSource}}();}
+\DoxyCodeLine{123         \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxBody_a88042de4f84bfcc93f49ba5ee58946c0}{getTarget}}();}
+\DoxyCodeLine{130         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFluxBody_ac53bb18454cfe04acf5456c0b84c37e4}{getFluxDirection}}();}
+\DoxyCodeLine{136         \textcolor{keywordtype}{double} \mbox{\hyperlink{classFluxBody_a31560d260435a6568a808e23cb3a1f1a}{getLastValue}}();}
+\DoxyCodeLine{142         \textcolor{keywordtype}{string} \mbox{\hyperlink{classFluxBody_a35c0fc5652ad48963f2d45fd68070c40}{getName}}();}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{148         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_ab1bee3183735b7ed59ae6f91bfce69cb}{removeSource}}();}
+\DoxyCodeLine{153         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_ae3f194b0736e6be97f3d765a7ff66c5c}{removeTarget}}();}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{159         \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxBody_aa570d1caaaf2e9bc98f63ef63a35ece5}{execute}}();}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{162 \textcolor{comment}{//         * @brief Constructs the output string used by << overload}}
+\DoxyCodeLine{163 \textcolor{comment}{//         * }}
+\DoxyCodeLine{164 \textcolor{comment}{//         * @param out String to be printed with flux's data}}
+\DoxyCodeLine{165 \textcolor{comment}{//         */}}
+\DoxyCodeLine{166 \textcolor{comment}{//        virtual void fluxOut (ostream \&out);}}
+\DoxyCodeLine{167 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{168 \textcolor{comment}{//         * @brief Overloads << operator}}
+\DoxyCodeLine{169 \textcolor{comment}{//         * }}
+\DoxyCodeLine{170 \textcolor{comment}{//         * @param out String to be printed with flux's data}}
+\DoxyCodeLine{171 \textcolor{comment}{//         * @param flux Flux pointer that references variables used on cout}}
+\DoxyCodeLine{172 \textcolor{comment}{//         * @return ostream\& }}
+\DoxyCodeLine{173 \textcolor{comment}{//         */}}
+\DoxyCodeLine{174 \textcolor{comment}{//        friend ostream \&operator <<(ostream \& out, Flux \&flux);}}
+\DoxyCodeLine{175 \textcolor{comment}{//        /**}}
+\DoxyCodeLine{176 \textcolor{comment}{//         * @brief Overloads = operator}}
+\DoxyCodeLine{177 \textcolor{comment}{//         * }}
+\DoxyCodeLine{178 \textcolor{comment}{//         * @param a const Flux memory address}}
+\DoxyCodeLine{179 \textcolor{comment}{//         * @return Flux\& }}
+\DoxyCodeLine{180 \textcolor{comment}{//         */}}
+\DoxyCodeLine{181 \textcolor{comment}{//        Flux \& operator=(const Flux \&a);}}
+\DoxyCodeLine{182 \};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{keyword}{class }\mbox{\hyperlink{classFluxHandle}{FluxHandle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFluxAbstract}{FluxAbstract}}, \textcolor{keyword}{public} \mbox{\hyperlink{classHandle}{Handle}}<FluxBody> \{}
+\DoxyCodeLine{185     \textcolor{keyword}{public}:}
+\DoxyCodeLine{186     \mbox{\hyperlink{classFluxHandle_add1384ef01bc832a4d80fe9feb5d0cc1}{FluxHandle}}(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* source = NULL, \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* target = NULL, \textcolor{keywordtype}{bool} fluxDirection = \textcolor{keyword}{true}, \textcolor{keywordtype}{double} lastValue = 0.0, \textcolor{keywordtype}{string} name = \textcolor{stringliteral}{"{}"{}}, \textcolor{keywordtype}{double} (*func) (\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* a) = NULL)\{}
+\DoxyCodeLine{187         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}{setSource}}(source);}
+\DoxyCodeLine{188         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}{setTarget}}(target);}
+\DoxyCodeLine{189         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}{setFluxDirection}}(fluxDirection);}
+\DoxyCodeLine{190         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a9ffe110f250b2d602f92776508853a78}{setLastValue}}(lastValue);}
+\DoxyCodeLine{191         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}{setName}}(name);}
+\DoxyCodeLine{192         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}{setFunc}}(func);}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195     \textcolor{keyword}{virtual} \mbox{\hyperlink{classFluxHandle_a66664826fabad5519df6267881f4407f}{\string~FluxHandle}}() \{\}}
+\DoxyCodeLine{196     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_a65079c2ec23b51feebc9cc4aebeeb594}{setSource}}(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* source) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_aa0c05591bea65d4ac84fb19d92e00dd4}{setSource}}(source); \}}
+\DoxyCodeLine{197     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_a04db52c34804508e95db23052b955bf4}{setTarget}}(\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* target) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a83ad12a1fad6a1120c68018b4135ed3c}{setTarget}}(target); \}}
+\DoxyCodeLine{198     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_ac1193cc5bf92c946cbaa32a46c9c4168}{setFluxDirection}}(\textcolor{keywordtype}{bool} fluxDirection) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a4c98b6d795b25f445eaa51bbd1345c79}{setFluxDirection}}(fluxDirection); \}}
+\DoxyCodeLine{199     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_a9382773f941bdfecee5eccebc1d1b533}{setLastValue}}(\textcolor{keywordtype}{double} lastValue) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a9ffe110f250b2d602f92776508853a78}{setLastValue}}(lastValue); \}}
+\DoxyCodeLine{200     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_ad2be7bf66c6300eaebbcf5f5360c0c18}{setName}}(\textcolor{keywordtype}{string} name) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a95039bd5c56299799e4460e0e96bb2c1}{setName}}(name); \}}
+\DoxyCodeLine{201     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_acf0c7f128e2106f6cf54479d81a251d6}{setFunc}}(\textcolor{keywordtype}{double} (*func) (\mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* a)) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_ac66f45bf8a82184e8d1e7a5dac9f8035}{setFunc}}(func); \}}
+\DoxyCodeLine{202     \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxHandle_a1075c7dc04f9cb60cfbaa8450137ec31}{getSource}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a432c99b6fd7d8a0661a2640e55f0b063}{getSource}}(); \}}
+\DoxyCodeLine{203     \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}* \mbox{\hyperlink{classFluxHandle_accaee4c03c5973c64aa5d3eac306cdc5}{getTarget}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a88042de4f84bfcc93f49ba5ee58946c0}{getTarget}}(); \}}
+\DoxyCodeLine{204     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFluxHandle_a4dc1457f62b3b7d8cd4b8792c7461e85}{getFluxDirection}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_ac53bb18454cfe04acf5456c0b84c37e4}{getFluxDirection}}(); \}}
+\DoxyCodeLine{205     \textcolor{keywordtype}{double} \mbox{\hyperlink{classFluxHandle_a66b305e41f652c5afa1631eea31099d1}{getLastValue}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a31560d260435a6568a808e23cb3a1f1a}{getLastValue}}(); \}}
+\DoxyCodeLine{206     \textcolor{keywordtype}{string} \mbox{\hyperlink{classFluxHandle_ad6896ef8a1a7bf3e10f8b0d86e88183d}{getName}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_a35c0fc5652ad48963f2d45fd68070c40}{getName}}(); \}}
+\DoxyCodeLine{207     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_ac42a19ae81e1b7eeb650927e53fa90ee}{removeSource}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_ab1bee3183735b7ed59ae6f91bfce69cb}{removeSource}}(); \} }
+\DoxyCodeLine{208     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_a508fea84aa92772551d9ee22af7ed0ce}{removeTarget}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_ae3f194b0736e6be97f3d765a7ff66c5c}{removeTarget}}(); \}}
+\DoxyCodeLine{209     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFluxHandle_a87bd5329467f9f91a00aa3504fb8e053}{execute}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFluxBody_aa570d1caaaf2e9bc98f63ef63a35ece5}{execute}}(); \}}
+\DoxyCodeLine{210 \};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

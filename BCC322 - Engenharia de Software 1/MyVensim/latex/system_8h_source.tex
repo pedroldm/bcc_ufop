@@ -1,0 +1,85 @@
+\hypertarget{system_8h_source}{}\doxysection{system.\+h}
+\label{system_8h_source}\index{src/lib/system.h@{src/lib/system.h}}
+\mbox{\hyperlink{system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYSTEM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYSTEM\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{systemAbstract_8h}{systemAbstract.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{handleBody_8h}{handleBody.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classSystemBody}{SystemBody}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBody}{Body}} \{}
+\DoxyCodeLine{14     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19         \textcolor{keywordtype}{double} \mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}};}
+\DoxyCodeLine{24         \textcolor{keywordtype}{string} \mbox{\hyperlink{classSystemBody_ac95aca9d3648f257855ca6436e7cb630}{name}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{comment}{//    /**}}
+\DoxyCodeLine{28     \textcolor{comment}{//     * @brief Construct a new System object}}
+\DoxyCodeLine{29     \textcolor{comment}{//     * }}
+\DoxyCodeLine{30     \textcolor{comment}{//     */}}
+\DoxyCodeLine{31     \textcolor{comment}{//    System();}}
+\DoxyCodeLine{32     \textcolor{comment}{//    /**}}
+\DoxyCodeLine{33     \textcolor{comment}{//     * @brief Construct a new System object}}
+\DoxyCodeLine{34     \textcolor{comment}{//     * }}
+\DoxyCodeLine{35     \textcolor{comment}{//     * @param name System's name}}
+\DoxyCodeLine{36     \textcolor{comment}{//     * @param value System's initial value}}
+\DoxyCodeLine{37     \textcolor{comment}{//     */}}
+\DoxyCodeLine{38     \textcolor{comment}{//    System(string name, double value);}}
+\DoxyCodeLine{39     \textcolor{comment}{//    /**}}
+\DoxyCodeLine{40     \textcolor{comment}{//     * @brief Construct a new System object}}
+\DoxyCodeLine{41     \textcolor{comment}{//     * }}
+\DoxyCodeLine{42     \textcolor{comment}{//     * @param a Const System object used to construct a System copy}}
+\DoxyCodeLine{43     \textcolor{comment}{//     */}}
+\DoxyCodeLine{44     \textcolor{comment}{//    System(const System\& a); }}
+\DoxyCodeLine{45     \textcolor{comment}{//    /**}}
+\DoxyCodeLine{46     \textcolor{comment}{//     * @brief Destroy the System object}}
+\DoxyCodeLine{47     \textcolor{comment}{//     * }}
+\DoxyCodeLine{48     \textcolor{comment}{//     */}}
+\DoxyCodeLine{49         \textcolor{keyword}{virtual} \mbox{\hyperlink{classSystemBody_afb42a75de32fb4c683e3a0545be53089}{\string~SystemBody}}() \{\}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}});}
+\DoxyCodeLine{62         \textcolor{keywordtype}{void} \mbox{\hyperlink{classSystemBody_a4127febc51ada004ffe252154179f903}{setName}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{classSystemBody_ac95aca9d3648f257855ca6436e7cb630}{name}});}
+\DoxyCodeLine{63         }
+\DoxyCodeLine{69         \textcolor{keywordtype}{double} \mbox{\hyperlink{classSystemBody_a947ef5bd9e283f54caa0afb04dea5028}{getValue}}();}
+\DoxyCodeLine{75         \textcolor{keywordtype}{string} \mbox{\hyperlink{classSystemBody_a32c923c901207b6d847e247d6b011557}{getName}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78         \textcolor{comment}{// * @brief Overloads = operator}}
+\DoxyCodeLine{79         \textcolor{comment}{// * }}
+\DoxyCodeLine{80         \textcolor{comment}{// * @param a }}
+\DoxyCodeLine{81         \textcolor{comment}{// * @return System\& }}
+\DoxyCodeLine{82         \textcolor{comment}{// */}}
+\DoxyCodeLine{83         \textcolor{comment}{//System \& operator=(const System \&a);}}
+\DoxyCodeLine{85 \textcolor{comment}{}        \textcolor{comment}{// * @brief Constructs the output string used by << overload}}
+\DoxyCodeLine{86         \textcolor{comment}{// * }}
+\DoxyCodeLine{87         \textcolor{comment}{// * @param out String to be printed with system's data}}
+\DoxyCodeLine{88         \textcolor{comment}{// */}}
+\DoxyCodeLine{89         \textcolor{comment}{//virtual void sysOut (ostream \&out);}}
+\DoxyCodeLine{91 \textcolor{comment}{}        \textcolor{comment}{// * @brief Overloads << operator}}
+\DoxyCodeLine{92         \textcolor{comment}{// * }}
+\DoxyCodeLine{93         \textcolor{comment}{// * @param out String to be printed with system's data}}
+\DoxyCodeLine{94         \textcolor{comment}{// * @param system System pointer that references variables used on cout}}
+\DoxyCodeLine{95         \textcolor{comment}{// * @return ostream\& }}
+\DoxyCodeLine{96         \textcolor{comment}{// */}}
+\DoxyCodeLine{97         \textcolor{comment}{//friend ostream \&operator <<(ostream \& out, System \&system);}}
+\DoxyCodeLine{98 \};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{keyword}{class }\mbox{\hyperlink{classSystemHandle}{SystemHandle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classSystemAbstract}{SystemAbstract}}, \textcolor{keyword}{public} \mbox{\hyperlink{classHandle}{Handle}}<SystemBody> \{}
+\DoxyCodeLine{101     \textcolor{keyword}{public}:}
+\DoxyCodeLine{102         \mbox{\hyperlink{classSystemHandle_aa22a4f92712b3124c2e243150856b332}{SystemHandle}}(\textcolor{keywordtype}{double} value = 0, \textcolor{keywordtype}{string} name = \textcolor{stringliteral}{"{}"{}})\{}
+\DoxyCodeLine{103             \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(value);}
+\DoxyCodeLine{104             \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a4127febc51ada004ffe252154179f903}{setName}}(name);}
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106         \textcolor{keyword}{virtual} \mbox{\hyperlink{classSystemHandle_a4b917da05a077c741b5ddddadf2f5d95}{\string~SystemHandle}}() \{\}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSystemHandle_ac38177a1c2cd415e69df7f1a42e311b5}{setValue}}(\textcolor{keywordtype}{double} value) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(value);\}}
+\DoxyCodeLine{109         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSystemHandle_adf9e04feadb585605634b572d660bbf1}{setName}}(\textcolor{keywordtype}{string} name) \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a4127febc51ada004ffe252154179f903}{setName}}(name); \}}
+\DoxyCodeLine{110         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classSystemHandle_afc93a1be6eca48e093349ba5fcfbecbd}{getValue}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a947ef5bd9e283f54caa0afb04dea5028}{getValue}}();\}}
+\DoxyCodeLine{111         \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{classSystemHandle_a513151d0b0f32f0a48b4c19076d7573e}{getName}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a32c923c901207b6d847e247d6b011557}{getName}}(); \}}
+\DoxyCodeLine{112 \};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

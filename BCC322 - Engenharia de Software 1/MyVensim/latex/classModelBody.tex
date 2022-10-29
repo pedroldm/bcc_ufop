@@ -1,0 +1,371 @@
+\hypertarget{classModelBody}{}\doxysection{Model\+Body Class Reference}
+\label{classModelBody}\index{ModelBody@{ModelBody}}
+
+
+Class that contains all systems and executes every \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} in the determined interval of time.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Inheritance diagram for Model\+Body\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classModelBody__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Body\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classModelBody__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelBody_a9c82a1f6dff9a398d7d3064d4bab5a00}{remove}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$sys)
+\begin{DoxyCompactList}\small\item\em Removes a System\+Abstract$\ast$ from the model\textquotesingle{}s vector of systems. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelBody_a826f2a0dbf73819dc9d2423befacc322}{remove}} (\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}})
+\begin{DoxyCompactList}\small\item\em Removes a Flux\+Abstract$\ast$ from the model\textquotesingle{}s vector of fluxes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelBody_a41398d783057b3a0ff27463e3f2380bf}{remove}} (\mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$model)
+\begin{DoxyCompactList}\small\item\em Remove a Model\+Abstract$\ast$ from the model\textquotesingle{}s vector of models. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classModelBody_ae1370c70a1a02a566e38bbcdb37bc28f}{$\sim$\+Model\+Body}} ()
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelBody_a5b840f74fa076dd896e1710be4bff448}{set\+Time}} (double \mbox{\hyperlink{classModelBody_a190b4c5dc2628825a6071e492ca244ab}{time}})
+\begin{DoxyCompactList}\small\item\em Set the Time object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classModelBody_af711d8c8de615e5cf52b95320e11b084}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the Time object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelBody_a7db2f3560d39d1039631dfcff6495f1e}{execute}} (double start, double end, double increase)
+\begin{DoxyCompactList}\small\item\em Executes every fluxe\textquotesingle{}s functions and assigns the difference of values according to the \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ \mbox{\hyperlink{classModelBody_ad71f59bdfc059854fa70505de83e4763}{create\+System}} (string name, double value)
+\begin{DoxyCompactList}\small\item\em System factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ \mbox{\hyperlink{classModelBody_a0bac7ecc787f32e0bf54690781d2345b}{create\+Flux}} (\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$source, \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$target, bool flux\+Direction, double last\+Value, string name, double($\ast$func)(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a))
+\begin{DoxyCompactList}\small\item\em Flux factory. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_a48aa72ecf25154e355c0a2e3e1e23618}{get\+Fluxes\+Begin}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_a4b8023a2a43e7ade4225c661918a2b4e}{get\+Fluxes\+End}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_ab01b6ea262486152910a1f7b11e5d372}{get\+Systems\+Begin}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_a4e432eff858536f0d8ca025503cd1176}{get\+Models\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em Get the Models Begin object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_a904ac0359ed214ddf3078894e29d4fe6}{get\+Models\+End}} ()
+\begin{DoxyCompactList}\small\item\em Get the Models End object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classModelBody_a12ec5e3b8de1bd17df6b6b529dd5f97d}{get\+Systems\+End}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ \mbox{\hyperlink{classModelBody_acad7500e69096d23c3b2f48b7f68a5e5}{create\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Create a Model object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classModelBody_a190b4c5dc2628825a6071e492ca244ab}{time}}
+\begin{DoxyCompactList}\small\item\em Current time. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$ \mbox{\hyperlink{classModelBody_abe913bda7762252a854f48f8ba7e2f99}{fluxes}}
+\begin{DoxyCompactList}\small\item\em Vector of pointers to fluxes. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$ \mbox{\hyperlink{classModelBody_a3ed030fa333119c4aea6aa722052a8f7}{systems}}
+\begin{DoxyCompactList}\small\item\em Vector of pointers to systems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$ \mbox{\hyperlink{classModelBody_aced959e722aa5eb2ae77035a07c265bf}{models}}
+\begin{DoxyCompactList}\small\item\em Vector of models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains all systems and executes every \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} in the determined interval of time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModelBody_ae1370c70a1a02a566e38bbcdb37bc28f}\label{classModelBody_ae1370c70a1a02a566e38bbcdb37bc28f}} 
+\index{ModelBody@{ModelBody}!````~ModelBody@{$\sim$ModelBody}}
+\index{````~ModelBody@{$\sim$ModelBody}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{$\sim$ModelBody()}{~ModelBody()}}
+{\footnotesize\ttfamily virtual Model\+Body\+::$\sim$\+Model\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+$\ast$$\ast$ 
+
+$\ast$$\ast$ $\ast$$\ast$ $\ast$$\ast$ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModelBody_a0bac7ecc787f32e0bf54690781d2345b}\label{classModelBody_a0bac7ecc787f32e0bf54690781d2345b}} 
+\index{ModelBody@{ModelBody}!createFlux@{createFlux}}
+\index{createFlux@{createFlux}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{createFlux()}{createFlux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ Model\+Body\+::create\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{target,  }\item[{bool}]{flux\+Direction,  }\item[{double}]{last\+Value,  }\item[{string}]{name,  }\item[{double($\ast$)(\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$a)}]{func }\end{DoxyParamCaption})}
+
+
+
+Flux factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source system of the flux \\
+\hline
+{\em target} & Target system of the flux \\
+\hline
+{\em flux\+Direction} & Indicates if the value to be used belongs to source or target flux \\
+\hline
+{\em last\+Value} & Value calculated from the last function execution \\
+\hline
+{\em name} & Flux\textquotesingle{}s name \\
+\hline
+{\em func} & Function pointer that is used to calculate the transit of values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flux\+Abstract$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_acad7500e69096d23c3b2f48b7f68a5e5}\label{classModelBody_acad7500e69096d23c3b2f48b7f68a5e5}} 
+\index{ModelBody@{ModelBody}!createModel@{createModel}}
+\index{createModel@{createModel}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ Model\+Body\+::create\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a Model object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Model\textquotesingle{}s time \\
+\hline
+{\em f} & flux vector \\
+\hline
+{\em s} & system vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classModelAbstract}{Model\+Abstract}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_ad71f59bdfc059854fa70505de83e4763}\label{classModelBody_ad71f59bdfc059854fa70505de83e4763}} 
+\index{ModelBody@{ModelBody}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ Model\+Body\+::create\+System (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+System factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & System\textquotesingle{}s current value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+System\+Abstract$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a7db2f3560d39d1039631dfcff6495f1e}\label{classModelBody_a7db2f3560d39d1039631dfcff6495f1e}} 
+\index{ModelBody@{ModelBody}!execute@{execute}}
+\index{execute@{execute}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Model\+Body\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{end,  }\item[{double}]{increase }\end{DoxyParamCaption})}
+
+
+
+Executes every fluxe\textquotesingle{}s functions and assigns the difference of values according to the \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Initial time \\
+\hline
+{\em end} & End time \\
+\hline
+{\em increase} & Increase rate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelBody_a48aa72ecf25154e355c0a2e3e1e23618}\label{classModelBody_a48aa72ecf25154e355c0a2e3e1e23618}} 
+\index{ModelBody@{ModelBody}!getFluxesBegin@{getFluxesBegin}}
+\index{getFluxesBegin@{getFluxesBegin}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getFluxesBegin()}{getFluxesBegin()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Fluxes\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Flux\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a4b8023a2a43e7ade4225c661918a2b4e}\label{classModelBody_a4b8023a2a43e7ade4225c661918a2b4e}} 
+\index{ModelBody@{ModelBody}!getFluxesEnd@{getFluxesEnd}}
+\index{getFluxesEnd@{getFluxesEnd}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getFluxesEnd()}{getFluxesEnd()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Fluxes\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Flux\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a4e432eff858536f0d8ca025503cd1176}\label{classModelBody_a4e432eff858536f0d8ca025503cd1176}} 
+\index{ModelBody@{ModelBody}!getModelsBegin@{getModelsBegin}}
+\index{getModelsBegin@{getModelsBegin}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getModelsBegin()}{getModelsBegin()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Models\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Models Begin object. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Model\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a904ac0359ed214ddf3078894e29d4fe6}\label{classModelBody_a904ac0359ed214ddf3078894e29d4fe6}} 
+\index{ModelBody@{ModelBody}!getModelsEnd@{getModelsEnd}}
+\index{getModelsEnd@{getModelsEnd}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getModelsEnd()}{getModelsEnd()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Models\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Models End object. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Model\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_ab01b6ea262486152910a1f7b11e5d372}\label{classModelBody_ab01b6ea262486152910a1f7b11e5d372}} 
+\index{ModelBody@{ModelBody}!getSystemsBegin@{getSystemsBegin}}
+\index{getSystemsBegin@{getSystemsBegin}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getSystemsBegin()}{getSystemsBegin()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Systems\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+System\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a12ec5e3b8de1bd17df6b6b529dd5f97d}\label{classModelBody_a12ec5e3b8de1bd17df6b6b529dd5f97d}} 
+\index{ModelBody@{ModelBody}!getSystemsEnd@{getSystemsEnd}}
+\index{getSystemsEnd@{getSystemsEnd}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getSystemsEnd()}{getSystemsEnd()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$ $>$\+::iterator Model\+Body\+::get\+Systems\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Flux\+Abstract$\ast$$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_af711d8c8de615e5cf52b95320e11b084}\label{classModelBody_af711d8c8de615e5cf52b95320e11b084}} 
+\index{ModelBody@{ModelBody}!getTime@{getTime}}
+\index{getTime@{getTime}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily double Model\+Body\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Time object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelBody_a826f2a0dbf73819dc9d2423befacc322}\label{classModelBody_a826f2a0dbf73819dc9d2423befacc322}} 
+\index{ModelBody@{ModelBody}!remove@{remove}}
+\index{remove@{remove}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Model\+Body\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} $\ast$}]{Flux\+Abstract }\end{DoxyParamCaption})}
+
+
+
+Removes a Flux\+Abstract$\ast$ from the model\textquotesingle{}s vector of fluxes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}}} & \mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}} to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelBody_a41398d783057b3a0ff27463e3f2380bf}\label{classModelBody_a41398d783057b3a0ff27463e3f2380bf}} 
+\index{ModelBody@{ModelBody}!remove@{remove}}
+\index{remove@{remove}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Model\+Body\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$}]{model }\end{DoxyParamCaption})}
+
+
+
+Remove a Model\+Abstract$\ast$ from the model\textquotesingle{}s vector of models. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Model to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelBody_a9c82a1f6dff9a398d7d3064d4bab5a00}\label{classModelBody_a9c82a1f6dff9a398d7d3064d4bab5a00}} 
+\index{ModelBody@{ModelBody}!remove@{remove}}
+\index{remove@{remove}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Model\+Body\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} $\ast$}]{sys }\end{DoxyParamCaption})}
+
+
+
+Removes a System\+Abstract$\ast$ from the model\textquotesingle{}s vector of systems. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sys} & \mbox{\hyperlink{classSystemAbstract}{System\+Abstract}} to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelBody_a5b840f74fa076dd896e1710be4bff448}\label{classModelBody_a5b840f74fa076dd896e1710be4bff448}} 
+\index{ModelBody@{ModelBody}!setTime@{setTime}}
+\index{setTime@{setTime}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Model\+Body\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Set the Time object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classModelBody_abe913bda7762252a854f48f8ba7e2f99}\label{classModelBody_abe913bda7762252a854f48f8ba7e2f99}} 
+\index{ModelBody@{ModelBody}!fluxes@{fluxes}}
+\index{fluxes@{fluxes}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{fluxes}{fluxes}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classFluxAbstract}{Flux\+Abstract}}$\ast$$>$ Model\+Body\+::fluxes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector of pointers to fluxes. 
+
+\mbox{\Hypertarget{classModelBody_aced959e722aa5eb2ae77035a07c265bf}\label{classModelBody_aced959e722aa5eb2ae77035a07c265bf}} 
+\index{ModelBody@{ModelBody}!models@{models}}
+\index{models@{models}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{models}{models}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classModelAbstract}{Model\+Abstract}} $\ast$ $>$ Model\+Body\+::models\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Vector of models. 
+
+\mbox{\Hypertarget{classModelBody_a3ed030fa333119c4aea6aa722052a8f7}\label{classModelBody_a3ed030fa333119c4aea6aa722052a8f7}} 
+\index{ModelBody@{ModelBody}!systems@{systems}}
+\index{systems@{systems}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{systems}{systems}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classSystemAbstract}{System\+Abstract}}$\ast$$>$ Model\+Body\+::systems\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector of pointers to systems. 
+
+\mbox{\Hypertarget{classModelBody_a190b4c5dc2628825a6071e492ca244ab}\label{classModelBody_a190b4c5dc2628825a6071e492ca244ab}} 
+\index{ModelBody@{ModelBody}!time@{time}}
+\index{time@{time}!ModelBody@{ModelBody}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double Model\+Body\+::time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Current time. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+src/lib/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}
