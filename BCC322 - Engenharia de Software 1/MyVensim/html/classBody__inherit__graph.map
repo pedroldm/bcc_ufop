@@ -1,6 +1,0 @@
-<map id="Body" name="Body">
-<area shape="rect" id="node1" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="214,5,317,141"/>
-<area shape="rect" id="node2" href="$classFluxBody.html" title="Class that contains 2 systems (source and target) and calculates the flux of values between them...." alt="" coords="5,189,160,531"/>
-<area shape="rect" id="node3" href="$classModelBody.html" title="Class that contains all systems and executes every FluxAbstract in the determined interval of time." alt="" coords="185,189,346,531"/>
-<area shape="rect" id="node4" href="$classSystemBody.html" title="Class that represents a system/stock." alt="" coords="370,285,510,435"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Flux" name="Flux">
-<area shape="rect" id="node1" title="Class that contains 2 systems (source and target) and calculates the flux of values between them...." alt="" coords="96,365,251,633"/>
-<area shape="rect" id="node2" href="$classFluxAbstract.html" title=" " alt="" coords="5,5,160,288"/>
-<area shape="rect" id="node3" href="$classSystemAbstract.html" title=" " alt="" coords="185,79,346,215"/>
-</map>
